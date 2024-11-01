@@ -1,6 +1,6 @@
 {
   "name": "hsa-image-compressor",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "main": "bin/hsa-image-compressor.js",
   "bin": {
     "hsa-image-compressor": "./bin/hsa-image-compressor.js"

@@ -7,15 +7,16 @@ const { Command } = require("commander");
 const program = new Command();
 
 program
-  .version("1.0.0")
-  .requiredOption("-i, --input <dir>", "Input directory")
-  .requiredOption("-o, --output <dir>", "Output directory")
+  .version("1.0.3")
+  .option("-i, --input <dir>", "Input directory")
+  .option("-o, --output <dir>", "Output directory")
   .option("-q, --quality <number>", "Image quality (0-100)", 80);
 
 program.parse(process.argv);
 
 const options = program.opts();
-const { input, output, quality } = options;
+const input = options.input || process.cwd(); // Use current directory if no input is provided
+const output = options.output || path.join(process.cwd(), 'output_optimized'); // Default output directory
 
 // Create output directory if it doesn't exist
 if (!fs.existsSync(output)) {
@@ -36,9 +37,9 @@ fs.readdir(input, (err, files) => {
     let sharpInstance = sharp(filePath);
 
     if (extname === ".jpeg" || extname === ".jpg") {
-      sharpInstance.jpeg({ quality: parseInt(quality) });
+      sharpInstance.jpeg({ quality: parseInt(options.quality) });
     } else if (extname === ".png") {
-      sharpInstance.png({ quality: parseInt(quality) });
+      sharpInstance.png({ quality: parseInt(options.quality) });
     } else {
       console.error(`Unsupported file format: ${file}`);
       return;

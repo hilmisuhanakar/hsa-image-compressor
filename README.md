@@ -28,9 +28,9 @@ hsa-image-compressor -i <input_directory> -o <output_directory> [-q <quality>]
       -i, --input <dir>: The input directory containing images to be compressed.
     </li>
     <li>
-      -o, --output <dir>: The output directory where compressed images will be saved.
+     -o, --output <dir>: The output directory where compressed images will be saved. If not specified, an output_optimized folder will be created in the current directory.
     </li>
     <li>
-      -q, --quality <number>: Image quality (0-100). Default value: 80.
+      -q, --quality <number>: Image quality (0-100). The default value is 80.
     </li>
  </ul>
