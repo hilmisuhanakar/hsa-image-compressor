@@ -37,4 +37,4 @@ hsa-image-compressor -i <input_directory> -o <output_directory> [-q <quality>]
 
 # Licence
 
-hsa-image-compressor - Material Design is an open source project that is licensed under the MIT license.
+hsa-image-compressor is an open source project that is licensed under the MIT license.
