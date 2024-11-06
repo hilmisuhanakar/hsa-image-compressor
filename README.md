@@ -34,3 +34,7 @@ hsa-image-compressor -i <input_directory> -o <output_directory> [-q <quality>]
       -q, --quality <number>: Image quality (0-100). The default value is 80.
     </li>
  </ul>
+
+# Licence
+
+hsa-image-compressor - Material Design is an open source project that is licensed under the MIT license.

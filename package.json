@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "main": "bin/hsa-image-compressor.js",
   "bin": {
-    "hsa-image-compressor": "./bin/hsa-image-compressor.js"
+    "hsa-image-compressor": "bin/hsa-image-compressor.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/hilmisuhanakar/hsa-image-compressor"
+    "url": "git+https://github.com/hilmisuhanakar/hsa-image-compressor.git"
   },
   "author": "Hilmi Sühan Akar",
   "license": "MIT",
@@ -24,5 +24,10 @@
   "dependencies": {
     "commander": "^12.1.0",
     "sharp": "^0.33.5"
-  }
+  },
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/hilmisuhanakar/hsa-image-compressor/issues"
+  },
+  "homepage": "https://github.com/hilmisuhanakar/hsa-image-compressor#readme"
 }
